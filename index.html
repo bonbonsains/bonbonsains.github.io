@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Dulces</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Link para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+
+<body>
+    <header>
+        <h1>BONBONS SAINS</h1>   
+        <h1>somos un grupo de jovenes que al ver la taza de diabetes tan alta que se presenta  en el pais, mediante diferentes encuestas llegamos a la idea de crear productos 
+            sin azucar remplazando esta por stevia o endulzantes de origen natural estos dulces y/o helados estan  inspirados en productos que han sido descontinuados del mercado con el pasar del tiempo.</h1>
+
+            <img src="img/Bonbons sains.png" alt="Descripción de la imagen" class="small-image">
+    </header>
+
+
+    <main>
+        <section id="dulces">
+            <h2>Elige tus productos favoritos</h2>
+            
+
+            <div class="producto">
+                <h3>Triang-late </h3>
+                <img src="img/Triang-late.jpeg" alt="Triang-late">
+                <p>Precio: $5.950 Pesos</p>
+                <div class="cantidad">
+                    <button onclick="cambiarCantidad('Triang-late', 5.950 , 'menos')">-</button>
+                    <span id="cantidad-Triang-late">1</span>
+                    <button onclick="cambiarCantidad('Triang-late', 5.950 , 'mas')">+</button>
+                </div>
+                <button class="btn-add" onclick="addToCart('Triang-late', 5.950 )">Agregar al carrito</button>
+                <button class="btn-detalle" onclick="verDetalles('Triang-late')">Ver detalles</button>
+                <p class="detalles" id="detalles-Triang-late" style="display: none;">Características: Este helado esta hecho a base de cacao en polvo endulzado con estevia 
+                    su empaque es triangular 
+                    queriendo imitar el tringulito de chocolate de la marca de bonice</p>
+            </div>
+
+            <div class="producto">
+                <h3>Baloncito  </h3>
+                <img src="img/Baloncito.PNG" alt="Baloncito">
+                <p>Precio: $3.000 Pesos</p>
+                <div class="cantidad">
+                    <button onclick="cambiarCantidad('Baloncito', 3.000, 'menos')">-</button>
+                    <span id="cantidad-Baloncito">1</span>
+                    <button onclick="cambiarCantidad('Baloncito', 3.000, 'mas')">+</button>
+                </div>
+                <button class="btn-add" onclick="addToCart('Baloncito', 3.000)">Agregar al carrito</button>
+                <button class="btn-detalle" onclick="verDetalles('Baloncito')">Ver detalles</button>
+                <p class="detalles" id="detalles-Baloncito" style="display: none;">Características: este helado esta hecho a base de vainilla y se endulza con stevia
+                    su envase es una pelota de futbol de plastico </p>
+            </div>
+
+            <div class="producto">
+                <h3>Lengua loca  </h3>
+                <img src="img/Lengua loca text.PNG" alt="Lengua loca">
+                <p>Precio: $3.500 pesos </p>
+                <div class="cantidad">
+                    <button onclick="cambiarCantidad('Lengua loca',3.500, 'menos')">-</button>
+                    <span id="cantidad-Lengua loca">1</span>
+                    <button onclick="cambiarCantidad('Lengua loca', 3.500, 'mas')">+</button>
+                </div>
+                <button class="btn-add" onclick="addToCart('Lengua loca', 3.500)">Agregar al carrito</button>
+                <button class="btn-detalle" onclick="verDetalles('Lengua loca')">Ver detalles</button>
+                <p class="detalles" id="detalles-Lengua loca" style="display: none;">Características:Helado hecho a base de gelatina que a medida de su consumo tiene un leve movimiento por  la gelatina que contiene </p>
+            </div>
+
+            <div class="producto">
+                <h3>Fruti mix</h3>
+                <img src="img/Fruti mix.PNG" alt="Fruti mix">
+                <p>Precio: $3.600 Pesos </p>
+                <div class="cantidad">
+                    <button onclick="cambiarCantidad('Fruti mix', 3.600, 'menos')">-</button>
+                    <span id="Fruti mix">1</span>
+                    <button onclick="cambiarCantidad('Fruti mix', 3.600, 'mas')">+</button>
+                </div>
+                <button class="btn-add" onclick="addToCart('Fruti mix', 3.600)">Agregar al carrito</button>
+                <button class="btn-detalle" onclick="verDetalles('Fruti mix')">Ver detalles</button>
+                <p class="detalles" id="detalles-Fruti mix" style="display: none;">Características: Galletas de avena 
+                    con stevia y  una cubierta de mermelada y mani salado</p>
+            </div>
+        </section>
+
+        <section id="carrito"> 
+            <h2>Carrito de compras</h2>
+            <ul id="lista-carrito"></ul>
+            <p>Total: $<span id="total">0.00</span></p>
+            <form id="formulario-compra">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="telefono">Número de Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="direccion">Dirección:</label>
+                <textarea id="direccion" name="direccion" required></textarea>
+
+                <button id="btn-comprar" onclick="comprar()">Comprar</button>
+            </form>
+            <div id="contacto">
+                <h2>Contáctanos</h2>
+                <p>Puedes seguirnos en nuestras redes sociales:</p>
+                <div id="redes-sociales">
+                    <a href="https://wa.me/ +57 314 4910223" target="_blank" class="contacto-icono"><i class="fab fa-whatsapp"></i> WhatsApp   +57 314 4910223 </a>
+                    <a href="https://www.facebook.com/share/A8c4iKbgtGAx3aK8/?mibextid=xfxF2i" target="_blank" class="contacto-icono"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="https://www.tiktok.com/@bonbonsains?_t=8pdl1aXjwHO&_r=1" target="_blank" class="contacto-icono"><i class="fab fa-tiktok"></i> TikTok</a>
+                    <a href="https://www.instagram.com/sainsbonbon?igsh=aWlrdzZ3eHAxMzhx" target="_blank" class="contacto-icono"><i class="fab fa-instagram"></i> instagram</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

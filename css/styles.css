@@ -1,0 +1,266 @@
+
+
+/* Estilo del logo */
+.small-image {
+    float: left;
+    width: 225px; /* Tamaño del logo */
+    height: auto;
+    border: 3px solid white; /* Borde blanco */
+    border-radius: 50%; /* Borde redondeado */
+    padding: 5px;
+    margin-right: 15px; /* Espacio entre el logo y el título */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor del logo */
+    transition: transform 0.3s ease; /* Transición para el efecto hover */
+}
+
+/* General styles */
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffe4e1;
+}
+
+/* Eliminar margen y padding del body para eliminar el espacio blanco */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del header */
+header {
+    background-color: #ff69b4; /* Rosa fuerte */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 10px;
+}
+
+/* Ajustes de márgenes y padding */
+header h1 {
+    font-size: 2.5em;
+    margin: 0; /* Elimina el espacio alrededor del título */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd1dc; /* Un rosa más suave */
+}
+
+/* Main styles */
+main {
+    padding: 20px;
+    margin: 0;
+    background-color: #ffe4e1;
+}
+
+/* Productos */
+#dulces {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta el tamaño de las columnas automáticamente */
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.producto {
+    text-align: center;
+    border: 2px solid #ffb6c1;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #fff0f5;
+    transition: transform 0.3s ease;
+    box-shadow: 3px 3px 10px rgba(255, 182, 193, 0.7);
+}
+
+.producto:hover {
+    transform: scale(1.05);
+    background-color: #ffccf2;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.producto h3 {
+    color: #d147a3;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    color: #ff1493;
+    font-weight: bold;
+}
+
+.cantidad {
+    margin: 10px 0;
+}
+
+.cantidad button {
+    padding: 5px 15px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.cantidad button:hover {
+    background-color: #ff85b4;
+}
+
+.btn-add, .btn-detalle {
+    padding: 10px 15px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.btn-add:hover, .btn-detalle:hover {
+    background-color: #ff85b4;
+}
+
+/* Carrito de compras */
+#carrito {
+    margin-top: 30px;
+}
+
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+    background-color: #fff0f5;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 3px 3px 10px rgba(255, 182, 193, 0.7);
+    width: 1000px;
+}
+
+#lista-carrito li {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #d147a3;
+}
+
+#total {
+    font-weight: bold;
+    color: #ff1493;
+    font-size: 1.5em;
+}
+
+/* Formulario */
+#formulario-compra {
+    margin-top: 20px;
+    background-color: #ffccf2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(255, 182, 193, 0.7);
+    
+}
+
+#formulario-compra label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #ff1493;
+}
+
+#formulario-compra input,
+#formulario-compra textarea {
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid #ff69b4;
+    background-color: #fff0f5;
+}
+
+#formulario-compra input:focus,
+#formulario-compra textarea:focus {
+    outline: none;
+    border-color: #ff1493;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+}
+
+#btn-comprar {
+    background-color: #ff1493;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+#btn-comprar:hover {
+    background-color: #ff85b4;
+}
+
+/* Detalles del producto */
+.detalles {
+    display: none;
+    font-size: 0.9em;
+    color: #d147a3;
+    margin-top: 10px;
+}
+#contacto {
+    flex: 0.5;
+    background-color: #fff0f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(255, 182, 193, 0.7);
+}
+
+#contacto h2 {
+    color: #ff1493;
+    margin-bottom: 10px;
+}
+
+#contacto p {
+    margin-bottom: 20px;
+    color: #d147a3;
+}
+
+#redes-sociales {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-icono {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ff1493;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contacto-icono i {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.contacto-icono:hover {
+    color: #ff69b4;
+}
+
+
